@@ -1,0 +1,10 @@
+.container.center-80
+  = form_tag authenticate_path, method: :post, class: 'half-width' do
+    .form-group
+      .row
+        = text_field_tag :username, nil, placeholder: 'Usuario', class: "input-large form-control text-center"
+        br
+      .row
+        = password_field :password, nil, placeholder: 'Contraseña', class: "form-control input-large text-center"
+	  .row
+	    = submit_tag 'Ingresar', class: 'form-control btn btn-secondary'
